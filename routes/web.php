@@ -63,3 +63,9 @@ Route::get('/hello', [WelcomeController::class, 'hello']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+// Route::get('/greeting', function(){
+//     return view('blog.hello', ['name' => 'Reza']);
+// });
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
