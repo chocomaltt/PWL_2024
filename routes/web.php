@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Selamat Datang';
+});
+
+Route::get('/hello', function(){
+    return 'Hello World';
+});
+
+Route::get('/world', function(){
+    return 'World';
+});
+
+Route::get('/about', function($nim = "2241720252", $nama = "Reza Arya Wijaya"){
+    return "About Me <br> NIM : " . $nim . "<br> Nama : " . $nama;
 });
