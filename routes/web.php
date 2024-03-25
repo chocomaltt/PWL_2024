@@ -19,7 +19,7 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', function () {
-    return 'Selamat Datang';
+    return view('welcome');
 });
 
 Route::get('/hello', function(){
@@ -60,7 +60,7 @@ Route::get('/hello', [WelcomeController::class, 'hello']);
 // Route::get('/about', [PageController::class, 'about']);
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
